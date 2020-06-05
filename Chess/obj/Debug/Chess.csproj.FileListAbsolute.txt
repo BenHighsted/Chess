@@ -3,3 +3,8 @@
 /Users/benhighsted/Projects/Chess/Chess/obj/Debug/Chess.csprojAssemblyReference.cache
 /Users/benhighsted/Projects/Chess/Chess/obj/Debug/Chess.exe
 /Users/benhighsted/Projects/Chess/Chess/obj/Debug/Chess.pdb
+/Users/benhighsted/Projects/Chess/Chess/Chess/obj/Debug/Chess.csprojAssemblyReference.cache
+/Users/benhighsted/Projects/Chess/Chess/Chess/obj/Debug/Chess.exe
+/Users/benhighsted/Projects/Chess/Chess/Chess/obj/Debug/Chess.pdb
+/Users/benhighsted/Projects/Chess/Chess/Chess/bin/Debug/Chess.exe
+/Users/benhighsted/Projects/Chess/Chess/Chess/bin/Debug/Chess.pdb
