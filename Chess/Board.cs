@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Chess
 {
     public class Board
     {
+        public string[] pieces = {"R", "H", "B"};
+
+
         public Board(List<GameTile> board, int boardSize)
         {
-            setupBoard(board, boardSize);
+            SetupBoard(board, boardSize);
         }
 
-        private static void initialiseBoard(List<GameTile> board, int size)
+        private static void InitialiseBoard(List<GameTile> board, int size)
         {
             for (int i = 0; i < size; i++)
             {
@@ -20,16 +24,23 @@ namespace Chess
 
                     tile.col = i;
                     tile.row = j;
-                    tile.type = "P";
+
+                    tile.color = true;
+
+                    //tile.type = new Piece();
 
                     board.Add(tile);
                 }
             }
         }
 
-        public static void setupBoard(List<GameTile> board, int boardSize)//this method will setup the board for a new game
+        private static void PlacePieces(List<GameTile> board) {
+
+        }
+
+        public static void SetupBoard(List<GameTile> board, int boardSize)//this method will setup the board for a new game
         {
-            initialiseBoard(board, boardSize);
+            InitialiseBoard(board, boardSize);
         }
     }
 }

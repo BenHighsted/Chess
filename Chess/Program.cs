@@ -12,10 +12,10 @@ namespace Chess
             int boardSize = 8;
 
             new Board(board, boardSize);
-            printBoard(board);
+            PrintBoard(board);
         }
 
-        private static void printBoard(List<GameTile> board)
+        private static void PrintBoard(List<GameTile> board)
         {
             foreach (GameTile tile in board)
             {
@@ -27,11 +27,19 @@ namespace Chess
         }
     }
 
-    public class GameTile //thinking i'll need a seperate class for each piece
+    public class GameTile
     {
         public int row;
         public int col;//board positions
 
-        public string type;//piece type (i.e. pawn)
+        public bool color; //white = true, black = false ?
+
+        public Piece type; //holds a piece object, or is null if nothing on board here
+    }
+
+    public class Piece
+    {
+        public bool color; //also true or false, instead we are talking about the piece here
+        public string type; //piece type (i.e. pawn)
     }
 }
