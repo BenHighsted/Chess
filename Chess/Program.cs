@@ -24,6 +24,14 @@ namespace Chess
                 if (tile.row == 7)
                     Console.WriteLine();
             }
+
+            Console.WriteLine(); //prints what colors the tiles are (only here for testing)
+            foreach (GameTile tile in board)
+            {
+                Console.Write(tile.color + " ");
+                if (tile.row == 7)
+                    Console.WriteLine();
+            }
         }
     }
 
@@ -39,7 +47,7 @@ namespace Chess
 
     public class Piece
     {
-        public bool color; //also true or false, instead we are talking about the piece here
+        public bool color; //also true or false, instead we are talking about the piece color here
         public string type; //piece type (i.e. pawn)
     }
 }

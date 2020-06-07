@@ -25,9 +25,23 @@ namespace Chess
                     tile.col = i;
                     tile.row = j;
 
-                    tile.color = true;
+                    //sets the colors of the tiles
+                    if (i % 2 == 0)
+                    {
+                        if (j % 2 == 0)
+                            tile.color = true;
+                        else
+                            tile.color = false;
+                    }
+                    else {
+                        if (j % 2 == 0)
+                            tile.color = false;
+                        else
+                            tile.color = true;
+                    }
 
-                    //tile.type = new Piece();
+
+                    //tile.type = new Piece(); (TO BE ADDED)
 
                     board.Add(tile);
                 }
