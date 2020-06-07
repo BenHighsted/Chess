@@ -61,7 +61,7 @@ namespace Chess
             //I believe the king starts on his color, if using the current layout black is at the top
             //and white starts at the bottom
 
-            //first ill try place black at the top.
+            //places black pieces (top of board)
             for (int i = 0; i < 8; i++) {
                 board[i].type = new Piece { color = false, type = piecesArrOne[i] };
             }
@@ -71,6 +71,16 @@ namespace Chess
                 board[i].type = new Piece { color = false, type = "P" };
             }
 
+            //places white pieces (bottom of board)
+            int count = 0;
+            for (int i = 56; i < 64; i++) {
+                board[i].type = new Piece { color = true, type = piecesArrOne[count] };
+                count++;
+            }
+
+            for (int i = 48; i < 56; i++) {
+                board[i].type = new Piece { color = true, type = "P" };
+            }
             
         }
 

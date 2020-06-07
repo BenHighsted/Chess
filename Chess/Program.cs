@@ -17,43 +17,14 @@ namespace Chess
 
         private static void PrintBoard(List<GameTile> board)
         {
-            foreach (GameTile tile in board)
-            {
-                //Console.Write(tile.type + " ");
-                Console.Write(tile.row.ToString() + " ");
-                if (tile.row == 7)
-                    Console.WriteLine();
-            }
-
-            Console.WriteLine(); //prints what colors the tiles are (only here for testing)
-            foreach (GameTile tile in board)
-            {
-                Console.Write(tile.color + " ");
-                if (tile.row == 7)
-                    Console.WriteLine();
-            }
-
             foreach (GameTile tile in board) {
-                if(tile.type != null)
-                {
-                    Console.Write(tile.type.type + " ");
-                }
-
-                if (tile.row == 7) {
-                    Console.WriteLine();
-                }
-            }
-
-            foreach (GameTile tile in board)
-            {
                 if (tile.type != null)
-                {
-                    Console.Write(tile.type.color + " ");
-                }
-                    if (tile.row == 7)
-                {
+                    Console.Write(tile.type.type + " ");
+                else
+                    Console.Write("[]");    
+
+                if (tile.row == 7)
                     Console.WriteLine();
-                }
             }
         }
     }
