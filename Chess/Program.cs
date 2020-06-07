@@ -32,6 +32,29 @@ namespace Chess
                 if (tile.row == 7)
                     Console.WriteLine();
             }
+
+            foreach (GameTile tile in board) {
+                if(tile.type != null)
+                {
+                    Console.Write(tile.type.type + " ");
+                }
+
+                if (tile.row == 7) {
+                    Console.WriteLine();
+                }
+            }
+
+            foreach (GameTile tile in board)
+            {
+                if (tile.type != null)
+                {
+                    Console.Write(tile.type.color + " ");
+                }
+                    if (tile.row == 7)
+                {
+                    Console.WriteLine();
+                }
+            }
         }
     }
 
