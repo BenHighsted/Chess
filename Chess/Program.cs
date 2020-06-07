@@ -17,15 +17,27 @@ namespace Chess
 
         private static void PrintBoard(List<GameTile> board)
         {
+            Console.WriteLine();
+            Console.WriteLine("   ---------------------------------");
+            Console.Write("   | ");
+
             foreach (GameTile tile in board) {
                 if (tile.type != null)
-                    Console.Write(tile.type.type + " ");
+                    Console.Write(tile.type.type);
                 else
-                    Console.Write("[]");    
+                    Console.Write("+");
+
+                Console.Write(" | ");
 
                 if (tile.row == 7)
+                {
                     Console.WriteLine();
+                    if(tile.col != 7)
+                        Console.Write("   | ");
+                }
             }
+            Console.WriteLine("   ---------------------------------");
+            Console.WriteLine();
         }
     }
 
