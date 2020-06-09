@@ -51,16 +51,6 @@ namespace Chess
         private static string[] piecesArrOne = { "R", "H", "B", "K", "Q", "B", "H", "R" };
 
         private static void PlacePieces(List<GameTile> board, int size) {
-            //Board setup is as follows:
-            //Rook, Horse, Bishop, King, Queen, Bishop, Horse, Rook
-            //Pawn, Pawn, Pawn, Pawn, Pawn, Pawn, Pawn, Pawn
-
-            //Pawn, Pawn, Pawn, Pawn, Pawn, Pawn, Pawn, Pawn
-            //Rook, Horse, Bishop, King, Queen, Bishop, Horse, Rook
-
-            //I believe the king starts on his color, if using the current layout black is at the top
-            //and white starts at the bottom
-
             //places black pieces (top of board)
             for (int i = 0; i < 8; i++) {
                 board[i].type = new Piece { color = false, type = piecesArrOne[i] };

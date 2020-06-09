@@ -13,6 +13,8 @@ namespace Chess
 
             new Board(board, boardSize);
             PrintBoard(board);
+
+            Move.MovePiece(board, 1, 2);
         }
 
         private static void PrintBoard(List<GameTile> board)
