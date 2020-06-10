@@ -24,8 +24,8 @@ namespace Chess
             Console.Write("   | ");
 
             foreach (GameTile tile in board) {
-                if (tile.type != null)
-                    Console.Write(tile.type.type);
+                if (tile.piece != null)
+                    Console.Write(tile.piece.type);
                 else
                     Console.Write("+");
 
@@ -50,7 +50,7 @@ namespace Chess
 
         public bool color; //white = true, black = false ?
 
-        public Piece type; //holds a piece object, or is null if nothing on board here
+        public Piece piece; //holds a piece object, or is null if nothing on board here
     }
 
     public class Piece

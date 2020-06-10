@@ -53,23 +53,23 @@ namespace Chess
         private static void PlacePieces(List<GameTile> board, int size) {
             //places black pieces (top of board)
             for (int i = 0; i < 8; i++) {
-                board[i].type = new Piece { color = false, type = piecesArrOne[i] };
+                board[i].piece = new Piece { color = false, type = piecesArrOne[i] };
             }
 
             for(int i = 8; i < 16; i++)
             {
-                board[i].type = new Piece { color = false, type = "P" };
+                board[i].piece = new Piece { color = false, type = "P" };
             }
 
             //places white pieces (bottom of board)
             int count = 0;
             for (int i = 56; i < 64; i++) {
-                board[i].type = new Piece { color = true, type = piecesArrOne[count] };
+                board[i].piece = new Piece { color = true, type = piecesArrOne[count] };
                 count++;
             }
 
             for (int i = 48; i < 56; i++) {
-                board[i].type = new Piece { color = true, type = "P" };
+                board[i].piece = new Piece { color = true, type = "P" };
             }
             
         }

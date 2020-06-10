@@ -14,27 +14,47 @@ namespace Chess
             //so in other words, when this is called, its saying the piece at boardPos, wants to move to newBoardPos
             
             //finds out which piece is being moved
-            if (board[boardPos].type.type == "P") //pawn
+            if (board[boardPos].piece.type == "P") //pawn
             {
                 Console.WriteLine("Moving Pawn");
+
+                //pawns can move forwards if no pieces are there, and can take pieces diagonally. It can do no other moves
+                //as of right now not going to worry about en passant
+
+                //check invalid directions first
+
+   
+                if (board[boardPos].piece.color) //white piece
+                {
+                    //assuming below is correct, it should give an error if you try to move a pawn backwards
+                    if (boardPos > newBoardPos)
+                    {
+                        Console.WriteLine("Error: Cannot move pawns backwards.");
+                        return false;
+                    }
+                }
+                else { //black piece
+                
+                }
+                
             } 
-            else if (board[boardPos].type.type == "R") //rook
+            else if (board[boardPos].piece.type == "R") //rook
             {
                 Console.WriteLine("Moving Rook");
             }
-            else if (board[boardPos].type.type == "H") //horse (knight)
+            else if (board[boardPos].piece.type == "H") //horse (knight)
             {
                 Console.WriteLine("Moving Horse (Knight)");
             }
-            else if (board[boardPos].type.type == "B") //bishop
+            else if (board[boardPos].piece.type == "B") //bishop
             {
                 Console.WriteLine("Moving Bishop");
             }
-            else if (board[boardPos].type.type == "K") //king
+            else if (board[boardPos].piece.type == "K") //king
             {
                 Console.WriteLine("Moving King");
             }
-            else if (board[boardPos].type.type == "Q") //queen
+            else if (board[boardPos].piece.type == "Q") //queen
             {
                 Console.WriteLine("Moving Queen");
             }
