@@ -5,9 +5,6 @@ namespace Chess
 {
     public class Board
     {
-        public string[] pieces = {"R", "H", "B"};
-
-
         public Board(List<GameTile> board, int boardSize)
         {
             SetupBoard(board, boardSize);

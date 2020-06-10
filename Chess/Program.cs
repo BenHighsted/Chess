@@ -13,8 +13,8 @@ namespace Chess
 
             new Board(board, boardSize);
             PrintBoard(board);
-
-            Move.MovePiece(board, 1, 2);
+            
+            Move.MovePiece(board, 49, 50);
         }
 
         private static void PrintBoard(List<GameTile> board)
@@ -34,12 +34,29 @@ namespace Chess
                 if (tile.row == 7)
                 {
                     Console.WriteLine();
-                    if(tile.col != 7)
+                    if (tile.col != 7)
+                    {
+                        Console.WriteLine("   ---------------------------------");
                         Console.Write("   | ");
+                    }
                 }
             }
             Console.WriteLine("   ---------------------------------");
             Console.WriteLine();
+
+            int count = 0;
+
+            foreach (GameTile tile in board) {
+
+                Console.Write(count + " ");
+                count++;
+
+                if (tile.row == 7) {
+                    Console.WriteLine();
+                }
+            }
+
+
         }
     }
 
